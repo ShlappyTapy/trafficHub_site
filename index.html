@@ -4,13 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shop</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div id = "main">
-        <h1>Online Store</h1>
-        
+        <h1>Buy Tickets</h1>
+        <input type="text" id="name" placeholder="Name"><br><br>
+        <input type="text" id="email" placeholder="Email"><br><br>
+        <button id="buy">Buy</button>
     </div>
 
+    <script src="https://telegram.org/js/telegram-web-app.js?56"></script>
+    <script>
+        let tg = window.Telegram.WebApp;
+        let buy = document.getElementById('buy');
 
+        buy.addEventListener("click", () => {
+            let name = document.getElementById("name").value;
+            let email = document.getElementById("email").value;
+
+            let data = {
+                name: name,
+                email: email
+            }
+            tg.sendData(JSON.stringify(data));
+            tg.close();
+        });
+    </script>
 </body>
 </html>

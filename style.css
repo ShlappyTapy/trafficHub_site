@@ -1,0 +1,34 @@
+body{
+    background: #222831;
+}
+
+h1{
+    color: #FFFFFF;
+    font-size: 50px;
+}
+
+input{
+    margin: auto;
+    width: 276px;
+    height: 67px;
+    border-radius: 20px;
+    background: #31363F;
+    border: none;
+    padding-left: 20px;
+    font-size: 20px;
+}
+
+button{
+    background: #25376E;
+    border-radius: 30px;
+    border: none;
+    width: 150px;
+    height: 67px;
+    font-size: 30px;
+    color: #FFFFFF;
+}
+
+.main{
+    display: flex;
+    align-items: center;
+}
